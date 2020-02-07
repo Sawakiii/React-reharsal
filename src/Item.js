@@ -1,8 +1,8 @@
 import React from "react"
 
-const Item = () => {
+const Item = (props) => {
     return (
-        <p>宿題をやる</p>
+        <p>{props.todo}</p>
     )
 }
 

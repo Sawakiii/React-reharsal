@@ -1,14 +1,13 @@
 import React from "react"
 import Item from "./Item"
 
-const List = () => {
+const List = (props) => {
+    const todolist = props.todos.map((todo)=>{
+        return (<Item todo={todo}></Item>)
+    })
     return (
         <ul>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
+            {todolist}
         </ul>
     )
 }

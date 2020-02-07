@@ -7,10 +7,14 @@ import List from "./List"
 
 // コンポーネントの定義
 const App = () => {
+
+  // データの設定
+  const [todos, setTodos] = React.useState(["宿題をやる"])
+
   return (
     <>
     <Form></Form>
-    <List></List>
+    <List todos={todos}></List>
     </>
   )
 }
