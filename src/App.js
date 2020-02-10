@@ -8,12 +8,14 @@ import List from "./List"
 // コンポーネントの定義
 const App = () => {
 
-  // データの設定
+  // データの設定 [state名, stateの再定義名] = React.useState(stateの初期値)
   const [todos, setTodos] = React.useState(["宿題をやる"])
 
+  // htmlのレンダリング
   return (
     <>
-    <Form></Form>
+    <Form todos={todos} setTodos={setTodos}></Form>
+    {/* stateはプロパティとして渡す */}
     <List todos={todos}></List>
     </>
   )
