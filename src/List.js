@@ -5,8 +5,8 @@ import Item from "./Item"
 const List = (props) => {
 
     // propsにはprops.プロパティ名でアクセスする。
-    const todolist = props.todos.map((todo)=>{
-        return (<Item todo={todo}></Item>)
+    const todolist = props.todos.map((todo, id)=>{
+        return (<Item todo={todo} id={id} todos={props.todos} setTodos={props.setTodos}></Item>)
     })
     return (
         <ul>

@@ -22,11 +22,21 @@ const Item = (props) => {
     const handleClick = () => {
         setIsDone(!isDone)
     }
+    const handleDelete = () => {
+        let newTodos = props.todos.slice()
+
+        // 該当する配列の要素を削除
+        newTodos.splice(props.id, 1)
+
+        //stateを更新
+        props.setTodos(newTodos)
+    }
 
     return (
         <>
             {pTag}
             <button onClick={handleClick}>{msg}</button>
+            <button onClick={handleDelete}>削除</button>
         </>
     )
 }

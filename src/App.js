@@ -16,7 +16,7 @@ const App = () => {
     <>
     <Form todos={todos} setTodos={setTodos}></Form>
     {/* stateはプロパティとして渡す */}
-    <List todos={todos}></List>
+    <List todos={todos} setTodos={setTodos}></List>
     </>
   )
 }
