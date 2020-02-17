@@ -1,4 +1,6 @@
 import React from "react"
+import Paper from "@material-ui/core/Paper"
+import TextField from "@material-ui/core/TextField"
 
 const Form = (props) => {
     const handleSubmit = (e) => {
@@ -25,7 +27,7 @@ const Form = (props) => {
             (e)=>{
                 handleSubmit(e)
             }}>
-            <input type="text" name="title" />
+            <TextField id="standard-basic" label="Standard" type="text" name="title" />
             <button type="submit">追加</button>
         </form>
     )

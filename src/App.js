@@ -5,6 +5,14 @@ import React from "react"
 import Form from "./Form"
 import List from "./List"
 
+// css in jsのためにstyled-componentsをインポート
+import styled from "styled-components"
+
+// cssの定義
+// const タグ名の定義 = styled.タグ名`スタイル`
+const Div = styled.div`
+`
+
 // コンポーネントの定義
 const App = () => {
 
@@ -13,11 +21,11 @@ const App = () => {
 
   // htmlのレンダリング
   return (
-    <>
+    <Div>
     <Form todos={todos} setTodos={setTodos}></Form>
     {/* stateはプロパティとして渡す */}
     <List todos={todos} setTodos={setTodos}></List>
-    </>
+    </Div>
   )
 }
 
